@@ -338,12 +338,8 @@ PaddleOCR(
 
 ```
 Dataset/
-├── xe_may/
-│   ├── bien_cu/        # 100+ images
-│   └── bien_moi/       # 80+ images
-└── oto/
-    ├── bien_cu/        # 100+ images
-    └── bien_moi/       # 80+ images
+├── xe_may/   # 60+ images
+└── oto/   # 60+ images
 ```
 
 ### File Naming Convention
