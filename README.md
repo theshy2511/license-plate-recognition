@@ -45,8 +45,6 @@ A robust and efficient system for detecting and recognizing Vietnamese license p
 
 ## 📸 Demo Screenshots
 
-## 📸 Demo Screenshots
-
 ### Main Interface
 ![Main Interface](demo/main_interface.png)
 
