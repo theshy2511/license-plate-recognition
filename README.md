@@ -243,12 +243,8 @@ license-plate-recognition/
 │   └── gui_components.py            # GUI helper functions
 │
 ├── Dataset/
-│   ├── xe_may/                      # Motorcycle plates
-│   │   ├── bien_cu/                 # Old format (4-digit)
-│   │   └── bien_moi/                # New format (5-digit)
-│   └── oto/                         # Car plates
-│       ├── bien_cu/                 # Old format
-│       └── bien_moi/                # New format
+│   ├── Xe_may/                      # Motorcycle plates              
+│   └── O_to/                         # Car plates
 │
 ├── .gitignore                       # Git ignore rules
 ├── requirements.txt                 # Python dependencies
