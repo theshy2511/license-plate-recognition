@@ -336,7 +336,7 @@ PaddleOCR(
 
 ```
 Dataset/
-├── xe_may/   # 60+ images
+├── xe_may/   # 90+ images
 └── oto/   # 60+ images
 ```
 
