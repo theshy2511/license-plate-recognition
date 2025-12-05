@@ -45,11 +45,16 @@ A robust and efficient system for detecting and recognizing Vietnamese license p
 
 ## 📸 Demo Screenshots
 
+## 📸 Demo Screenshots
+
 ### Main Interface
-The application features a clean, intuitive interface with three main sections:
-- Image upload panel
-- Recognition results display
-- Processing steps visualization
+![Main Interface](demo/main_interface.png)
+
+### Recognition Results
+![Results](demo/result.png)
+
+### Processing Steps
+![Processing Steps](demo/processing_steps.png)
 
 ### Processing Pipeline
 View the complete processing pipeline:
