@@ -17,7 +17,6 @@ class LicensePlateRecognizer:
         print("🔄 Đang khởi tạo PaddleOCR...")
         self.ocr = PaddleOCR(use_angle_cls=True, lang='en')
         self.ocr_image = None
-        self.binary_image = None
         self.raw_text = None
         print("✅ PaddleOCR đã sẵn sàng!")
 

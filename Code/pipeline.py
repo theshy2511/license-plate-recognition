@@ -6,7 +6,6 @@ import cv2
 import imutils
 from person1_preprocessing import ImagePreprocessor
 from person2_detection import LicensePlateDetector
-from person3_segmentation import CharacterSegmenter
 from person3_recognition import LicensePlateRecognizer
 from config import IMAGE_WIDTH
 
@@ -17,7 +16,6 @@ class LicensePlatePipeline:
     def __init__(self):
         self.preprocessor = ImagePreprocessor()
         self.detector = LicensePlateDetector()
-        self.segmenter = CharacterSegmenter()
         self.recognizer = LicensePlateRecognizer()
 
     def process(self, image_path):
@@ -42,10 +40,7 @@ class LicensePlatePipeline:
 
         detection_visual = self.detector.get_detection_visual(img)
 
-        # NGƯỜI 3A: Tách ký tự
-        segmented_visual, characters = self.segmenter.segment(plate)
-
-        # NGƯỜI 3B: OCR
+        # NGƯỜI 3: OCR
         text = self.recognizer.recognize(plate)
         ocr_image = self.recognizer.get_ocr_image()
 
@@ -54,14 +49,11 @@ class LicensePlatePipeline:
             'text': text,
             'plate_image': plate,
             'plate_info': info,
-            'characters': characters,
-            'character_count': len(characters),
             'processing_steps': {
                 'blackhat': steps['blackhat'],
                 'sobel': steps['sobel'],
                 'threshold': steps['threshold'],
                 'detection': detection_visual,
-                'segmented': segmented_visual,
                 'ocr': ocr_image
             },
             'original_image': img
@@ -84,7 +76,6 @@ if __name__ == '__main__':
     print("=" * 60)
     print(f"Biển số: {result['text']}")
     print(f"Loại xe: {result['plate_info']['type']}")
-    print(f"Số ký tự tách được: {result['character_count']}")
     print(f"Vị trí: ({result['plate_info']['x']}, {result['plate_info']['y']})")
     print(f"Kích thước: {result['plate_info']['w']}x{result['plate_info']['h']}")
     print("=" * 60)
